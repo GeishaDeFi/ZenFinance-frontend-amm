@@ -1,8 +1,8 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
-import { AbstractConnector } from '@web3-react/abstract-connector'
+import {ChainId, JSBI, Percent, Token, WETH} from '@pancakeswap-libs/sdk'
+import {AbstractConnector} from '@web3-react/abstract-connector'
 
 // import { bsc, fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
-import { injected, bsc } from '../connectors'
+import {injected, bsc} from '../connectors'
 // TODO
 export const ROUTER_ADDRESS = '0x05fF2B0DB69458A0750badebc4f9e13aDd608C7F'
 
@@ -33,7 +33,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
  * Some tokens can only be swapped via certain pairs, so we override the list of bases that are considered for these
  * tokens.
  */
-export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
+export const CUSTOM_BASES: {[chainId in ChainId]?: {[tokenAddress: string]: Token[]}} = {
   [ChainId.MAINNET]: {
     [ETH.address]: [DAI, WETH[ChainId.MAINNET]]
   }
@@ -51,7 +51,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, BUSD, USDT]
 }
 
-export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
+export const PINNED_PAIRS: {readonly [chainId in ChainId]?: [Token, Token][]} = {
   [ChainId.MAINNET]: [
     [
       new Token(ChainId.MAINNET, '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82', 18, 'CAKE', 'PancakeSwap Token'),
@@ -74,7 +74,7 @@ export interface WalletInfo {
   mobileOnly?: true
 }
 
-export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
+export const SUPPORTED_WALLETS: {[key: string]: WalletInfo} = {
   BSC: {
     connector: bsc,
     name: 'Binance Chain Wallet',
@@ -149,7 +149,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
 export const NetworkContextName = 'NETWORK'
 
 // default allowed slippage, in bips
-export const INITIAL_ALLOWED_SLIPPAGE = 80
+export const INITIAL_ALLOWED_SLIPPAGE = 200
 // 20 minutes, denominated in seconds
 export const DEFAULT_DEADLINE_FROM_NOW = 60 * 20
 

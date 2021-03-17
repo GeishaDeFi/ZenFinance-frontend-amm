@@ -1,10 +1,10 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import {MenuEntry} from '@pancakeswap-libs/uikit'
 
 const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://fedswap.finance'
+    href: 'https://takoyakidefi.com'
   },
   {
     label: 'Trade',
@@ -22,14 +22,14 @@ const config: MenuEntry[] = [
     ]
   },
   {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: 'https://fedswap.finance/farms'
+    label: 'Restaurants',
+    icon: 'TakoyakiIcon',
+    href: 'https://takoyakidefi.com/restaurants',
   },
   {
-    label: 'Banks',
+    label: 'Stands',
     icon: 'PoolIcon',
-    href: 'https://fedswap.finance/banks'
+    href: 'https://takoyakidefi.com/stands',
   },
   // {
   //   label: 'Lottery',
@@ -42,20 +42,20 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6',
+        href: 'https://pancakeswap.info/token/',
       },
-      {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/fed-finance',
-      },
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/fed-finance/',
-      },
-      {
-        label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      },
+      //  {
+      //  label: 'BscScan',
+      //  href: 'https://bscscan.com/address/',
+      //  },
+      // {
+      //   label: 'CoinGecko',
+      //   href: 'https://www.coingecko.com/en/coins/goose-finance',
+      // },
+      // // {
+      //   label: 'CoinMarketCap',
+      //   href: 'https://coinmarketcap.com/currencies/goose-finance/',
+      // },
     ],
   },
   {
@@ -64,15 +64,15 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/fedswap/',
+        href: 'https://github.com/takoyakidefi/',
       },
       {
         label: 'Docs',
-        href: 'https://fed-finance.gitbook.io/fed-finance/',
+        href: 'https://docs.takoyakidefi.com',
       },
       {
         label: 'Blog',
-        href: 'https://goosefinance.medium.com/',
+        href: 'https://medium.com/@takoyakidefi',
       },
     ],
   },
@@ -86,6 +86,17 @@ const config: MenuEntry[] = [
   //   icon: 'AuditIcon',
   //   href: 'https://certik.org/projects/goose-finance',
   // },
+  //
+  {
+    label: 'Road Map',
+    icon: 'RoadmapIcon',
+    href: 'https://docs.takoyakidefi.com/road-map',
+  },
+  {
+    label: 'Audit by TechRate',
+    icon: 'AuditIcon',
+    href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/Takoyaki%20Finance.pdf',
+  },
 ]
 
 export default config

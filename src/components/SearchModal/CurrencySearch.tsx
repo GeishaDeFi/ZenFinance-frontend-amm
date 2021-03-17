@@ -1,32 +1,32 @@
-import { Currency, ETHER, Token } from '@pancakeswap-libs/sdk'
-import React, { KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { Text, CloseIcon } from '@pancakeswap-libs/uikit'
-import { useSelector } from 'react-redux'
-import { useTranslation } from 'react-i18next'
-import { FixedSizeList } from 'react-window'
-import { ThemeContext } from 'styled-components'
+import {Currency, ETHER, Token} from '@pancakeswap-libs/sdk'
+import React, {KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState} from 'react'
+import {Text, CloseIcon} from '@pancakeswap-libs/uikit'
+import {useSelector} from 'react-redux'
+import {useTranslation} from 'react-i18next'
+import {FixedSizeList} from 'react-window'
+import {ThemeContext} from 'styled-components'
 import AutoSizer from 'react-virtualized-auto-sizer'
-import { useActiveWeb3React } from '../../hooks'
-import { AppState } from '../../state'
-import { useAllTokens, useToken } from '../../hooks/Tokens'
-import { useSelectedListInfo } from '../../state/lists/hooks'
-import { LinkStyledButton, TYPE } from '../Shared'
-import { isAddress } from '../../utils'
+import {useActiveWeb3React} from '../../hooks'
+import {AppState} from '../../state'
+import {useAllTokens, useToken} from '../../hooks/Tokens'
+import {useSelectedListInfo} from '../../state/lists/hooks'
+import {LinkStyledButton, TYPE} from '../Shared'
+import {isAddress} from '../../utils'
 import Card from '../Card'
 import Column from '../Column'
 import ListLogo from '../ListLogo'
 import QuestionHelper from '../QuestionHelper'
-import Row, { RowBetween } from '../Row'
+import Row, {RowBetween} from '../Row'
 import CommonBases from './CommonBases'
 import CurrencyList from './CurrencyList'
-import { filterTokens } from './filtering'
+import {filterTokens} from './filtering'
 import SortButton from './SortButton'
-import { useTokenComparator } from './sorting'
-import { PaddedColumn, SearchInput, Separator } from './styleds'
+import {useTokenComparator} from './sorting'
+import {PaddedColumn, SearchInput, Separator} from './styleds'
 import TranslatedText from '../TranslatedText'
-import { TranslateString } from '../../utils/translateTextHelpers'
+import {TranslateString} from '../../utils/translateTextHelpers'
 
-const { main: Main } = TYPE
+const {main: Main} = TYPE
 
 interface CurrencySearchProps {
   isOpen: boolean
@@ -47,8 +47,8 @@ export function CurrencySearch({
   isOpen,
   onChangeList,
 }: CurrencySearchProps) {
-  const { t } = useTranslation()
-  const { chainId } = useActiveWeb3React()
+  const {t} = useTranslation()
+  const {chainId} = useActiveWeb3React()
   const theme = useContext(ThemeContext)
 
   const fixedList = useRef<FixedSizeList>()
@@ -141,7 +141,7 @@ export function CurrencySearch({
   const selectedListInfo = useSelectedListInfo()
 
   return (
-    <Column style={{ width: '100%', flex: '1 1' }}>
+    <Column style={{width: '100%', flex: '1 1'}}>
       <PaddedColumn gap="14px">
         <RowBetween>
           <Text>
@@ -177,9 +177,9 @@ export function CurrencySearch({
 
       <Separator />
 
-      <div style={{ flex: '1' }}>
+      <div style={{flex: '1'}}>
         <AutoSizer disableWidth>
-          {({ height }) => (
+          {({height}) => (
             <CurrencyList
               height={height}
               showETH={showETH}
@@ -202,7 +202,7 @@ export function CurrencySearch({
                 <Row>
                   {selectedListInfo.current.logoURI ? (
                     <ListLogo
-                      style={{ marginRight: 12 }}
+                      style={{marginRight: 12}}
                       logoURI={selectedListInfo.current.logoURI}
                       alt={`${selectedListInfo.current.name} list logo`}
                     />
@@ -211,7 +211,7 @@ export function CurrencySearch({
                 </Row>
               ) : null}
               <LinkStyledButton
-                style={{ fontWeight: 500, color: theme.colors.textSubtle, fontSize: 16 }}
+                style={{fontWeight: 500, color: theme.colors.textSubtle, fontSize: 16}}
                 onClick={onChangeList}
                 id="currency-search-change-list-button"
               >

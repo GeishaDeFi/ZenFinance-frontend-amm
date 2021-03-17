@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import BigNumber from 'bignumber.js'
-import { useMulticallContract } from './useContract'
+import {request} from 'https'
+import {useMulticallContract} from './useContract'
 import ERC20_INTERFACE from '../constants/abis/erc20'
 import priceContracts from '../constants/eggPriceContracts'
 
@@ -25,7 +26,7 @@ const useGetPriceData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if(multicallContract){
+        if (multicallContract) {
           const {cakeAddress, busdAddress, lpAddress} = priceContracts;
           const calls = [
             [cakeAddress, ERC20_INTERFACE.encodeFunctionData("balanceOf", [lpAddress])],
@@ -33,10 +34,11 @@ const useGetPriceData = () => {
           ];
 
           const [resultsBlockNumber, result] = await multicallContract.aggregate(calls);
-          const [cakeAmount, busdAmount] = result.map(r=>ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
+          const [cakeAmount, busdAmount] = result.map(r => ERC20_INTERFACE.decodeFunctionResult("balanceOf", r));
           const cake = new BigNumber(cakeAmount);
           const busd = new BigNumber(busdAmount);
           const cakePrice = busd.div(cake).toNumber();
+
           setData(cakePrice)
         }
       } catch (error) {

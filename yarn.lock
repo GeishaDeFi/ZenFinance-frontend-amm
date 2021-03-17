@@ -1982,9 +1982,9 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap-libs/uikit@fedswap/fedswap-uikit":
+"@pancakeswap-libs/uikit@takoyakidefi/takoyaki-uikit":
   version "0.10.2"
-  resolved "https://codeload.github.com/fedswap/fedswap-uikit/tar.gz/c1702c1bb0ec1c342437a2d08ff0a50cacdb8534"
+  resolved "https://codeload.github.com/takoyakidefi/takoyaki-uikit/tar.gz/72a8081ffba3986305fdc81af154b64b8af0ae49"
   dependencies:
     "@types/lodash" "^4.14.162"
     "@types/styled-system" "^5.1.10"
