@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://takoyakidefi.com'
+    href: 'https://defizens.com'
   },
   {
     label: 'Trade',
@@ -24,12 +24,12 @@ const config: MenuEntry[] = [
   {
     label: 'Restaurants',
     icon: 'TakoyakiIcon',
-    href: 'https://takoyakidefi.com/restaurants',
+    href: 'https://defizens.com/restaurants',
   },
   {
     label: 'Stands',
     icon: 'PoolIcon',
-    href: 'https://takoyakidefi.com/stands',
+    href: 'https://defizens.com/stands',
   },
   // {
   //   label: 'Lottery',
@@ -64,16 +64,16 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/takoyakidefi/',
+        href: 'https://github.com/ZENSDefi/',
       },
-      {
-        label: 'Docs',
-        href: 'https://docs.takoyakidefi.com',
-      },
-      {
-        label: 'Blog',
-        href: 'https://medium.com/@takoyakidefi',
-      },
+    //  {
+    //    label: 'Docs',
+    //    href: 'https://docs.takoyakidefi.com',
+    //  },
+    //  {
+     //   label: 'Blog',
+    //    href: 'https://medium.com/@takoyakidefi',
+    //  },
     ],
   },
   // {
@@ -87,16 +87,16 @@ const config: MenuEntry[] = [
   //   href: 'https://certik.org/projects/goose-finance',
   // },
   //
-  {
-    label: 'Road Map',
-    icon: 'RoadmapIcon',
-    href: 'https://docs.takoyakidefi.com/road-map',
-  },
-  {
-    label: 'Audit by TechRate',
-    icon: 'AuditIcon',
-    href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/Takoyaki%20Finance.pdf',
-  },
+ // {
+ //   label: 'Road Map',
+  //  icon: 'RoadmapIcon',
+  //  href: 'https://docs.takoyakidefi.com/road-map',
+ // },
+ // {
+ //   label: 'Audit by TechRate',
+ //   icon: 'AuditIcon',
+ //   href: 'https://github.com/TechRate/Smart-Contract-Audits/blob/main/Takoyaki%20Finance.pdf',
+ // },
 ]
 
 export default config

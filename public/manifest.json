@@ -1,7 +1,7 @@
 {
-  "short_name": "TakoExchange",
-  "name": "Takoyaki Exchange",
-  "description": "Exchange TAKO with other Tokens",
+  "short_name": "ZENSExchange",
+  "name": "Zens Exchange",
+  "description": "Exchange ZENS with other Tokens",
   "icons": [
     {
       "src": "./logo.png",
