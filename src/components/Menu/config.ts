@@ -22,14 +22,14 @@ const config: MenuEntry[] = [
     ]
   },
   {
-    label: 'Restaurants',
+    label: 'Farms',
     icon: 'TakoyakiIcon',
-    href: 'https://defizens.com/restaurants',
+    href: 'https://defizens.com/farms',
   },
   {
-    label: 'Stands',
+    label: 'Baths',
     icon: 'PoolIcon',
-    href: 'https://defizens.com/stands',
+    href: 'https://defizens.com/baths',
   },
   // {
   //   label: 'Lottery',
@@ -64,7 +64,7 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/ZENSDefi/',
+        href: 'https://github.com/GeishaDeFi/',
       },
     //  {
     //    label: 'Docs',
