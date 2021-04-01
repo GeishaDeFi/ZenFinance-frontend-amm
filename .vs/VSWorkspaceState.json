@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\src",
+    "\\src\\components",
+    "\\src\\constants",
+    "\\src\\constants\\abis",
+    "\\src\\constants\\token",
+    "\\src\\constants\\v1",
+    "\\src\\data",
+    "\\src\\hooks"
+  ],
+  "SelectedNode": "\\src\\constants\\eggPriceContracts.ts",
+  "PreviewInSolutionExplorer": false
+}
